@@ -11,6 +11,8 @@ all: test build
 
 test:
 	@echo "Running all tests"
+	go clean -testcache
+	go test -v -race github.com/istherepie/dropoff/internal/webserver
 
 build:
 	@echo "Building binaries"
